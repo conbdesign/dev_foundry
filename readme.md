@@ -9,12 +9,12 @@ Smiles
 
 William
 -------
-1.  Create a working GitHub account to hold your code and give Keith access.
-2.  Read Chapter 1 of the C# Reference
-3.  Read "Visual C# 2005" through Chapter 1 skipping Chapter 7
+1.  Create a working GitHub account to hold your code and give Keith access--done
+2.  Read Chapter 1 of the C# Reference--done
+3.  Read "Visual C# 2005" through Chapter 10 skipping Chapter 7
 4.  Create an account on Reddit, Stack Overflow, Hacker News
 5.  Rewrite Game of Life in C#
-6.  Finish SQL on w3schools down to full join
+6.  Finish SQL on w3schools down to full join--done
 
  
 
