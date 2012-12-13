@@ -16,6 +16,10 @@ William
 5.  Rewrite Game of Life in C#
 6.  Finish SQL on w3schools down to full join--done
 7.  Google 'Markdown' and read about the language
+8.  Improve the Project Euler Project with the following improvements
+    *  Add some general validation
+    *  Add some specific validation
+    *  Alter input code in Controller so if validation fails the user is informed as to what happened and asked to input the value again.
 
  
 
