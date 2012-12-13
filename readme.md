@@ -15,6 +15,7 @@ William
 4.  Create an account on Reddit, Stack Overflow, Hacker News
 5.  Rewrite Game of Life in C#
 6.  Finish SQL on w3schools down to full join--done
+7.  Google 'Markdown' and read about the language
 
  
 
