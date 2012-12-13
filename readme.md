@@ -38,6 +38,6 @@ DL
 
 Keith
 --------
-1. ~Create a working GitHub account to hold your code and give Keith access.~
+1. ~~Create a working GitHub account to hold your code and give Keith access.~~
 2.  RubyTutorial.org
 3.  .NET MVC 3
