@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Blackjack
 {
-    public class Output : IOutputInput
+    public static class Output
     {
         public static void DisplayGame(IBlackjackGame game)
         {
