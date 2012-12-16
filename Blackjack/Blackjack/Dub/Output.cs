@@ -7,7 +7,7 @@ namespace Blackjack
 {
     public class Output : IOutputInput
     {
-        public void DisplayGame(IBlackjackGame game)
+        public static void DisplayGame(IBlackjackGame game)
         {
             foreach (IPlayer player in game.Players)
             {
@@ -15,7 +15,7 @@ namespace Blackjack
             }
         }
 
-        private void DisplayPlayer(IPlayer player)
+        private static void DisplayPlayer(IPlayer player)
         {
 
         }
