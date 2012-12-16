@@ -11,11 +11,6 @@ namespace Blackjack
         private List<IPlayer> players;
         private IDeck deck;
 
-        public List<IPlayer> Players
-        {
-            get { return players; }
-        }
-
         public void Setup()
         {
             string inputText = "a";
@@ -26,7 +21,7 @@ namespace Blackjack
 
             CreatePlayers();
 
-            deck = new Deck();
+            
         }
 
         private void CreateDealer()
@@ -36,19 +31,7 @@ namespace Blackjack
 
         private void CreatePlayers()
         {
-            for (int i = 0; i < numberOfPlayer; i++)
-            {
-                InputPlayer();
-            }
-        }
 
-        private void InputPlayer()
-        {
-            Console.Clear();
-            Console.Write("Enter a player name: ");
-            string name = Console.ReadLine();
-
-            players.Add(new Player(PlayerType.HUMAN, name));
         }
 
         private static void GetPlayerCount(ref int numberOfPlayer, ref string inputText)
@@ -71,60 +54,7 @@ namespace Blackjack
 
         public void Play()
         {
-            bool wantToPlayMore = true;
 
-            while (wantToPlayMore)
-            {
-                PlayHand();
-
-                wantToPlayMore = DoesUserWantToContinue();
-            }
-        }
-
-        private void PlayHand()
-        {
-            deck.Shuffle();
-
-            DealHands();
-
-            GivePlayersChanceToHit();
-
-            DeclareWinner();
-        }
-
-        private void DealHands()
-        {
-            foreach (IPlayer player in players)
-            {
-                player.Hand.AddCard(deck.Draw());
-            }
-
-            foreach (IPlayer player in players)
-            {
-                player.Hand.AddCard(deck.Draw());
-            }
-        }
-
-        private void GivePlayersChanceToHit()
-        {
-
-        }
-
-        private void DeclareWinner()
-        {
-
-        }
-
-        private bool DoesUserWantToContinue()
-        {
-            Console.Clear();
-            Console.Write("Do you want to play another hand <Y/N>? ");
-            string continueText = Console.ReadLine();
-
-            if (continueText.ToUpper() != "Y")
-                return false;
-
-            return true;
         }
     }
 }
