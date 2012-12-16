@@ -92,7 +92,7 @@ namespace Blackjack
 
             GivePlayersChanceToHit();
 
-            DeclareWinner();
+            DeclareWinners();
         }
 
         private void DealHands()
@@ -100,22 +100,45 @@ namespace Blackjack
             foreach (IPlayer player in players)
             {
                 player.Hand.AddCard(deck.Draw());
+                Output.DisplayGame(this);
             }
 
             foreach (IPlayer player in players)
             {
                 player.Hand.AddCard(deck.Draw());
+                Output.DisplayGame(this);
             }
         }
 
         private void GivePlayersChanceToHit()
         {
-
+            foreach (IPlayer player in players)
+            {
+                while (player.Play() == Action.HIT)
+                {
+                    player.Hand.AddCard(deck.Draw());
+                    Output.DisplayGame(this);
+                }
+            }
         }
 
-        private void DeclareWinner()
+        private void DeclareWinners()
         {
+            Console.Clear();
 
+            foreach (IPlayer player in players)
+            {
+                if (player.Hand.Score() <= 21)
+                {
+                    Console.WriteLine((player.Type == PlayerType.HUMAN ? "Player " + player.Name : "The Dealer ") 
+                        + " has won.");
+                }
+                else
+                {
+                    Console.WriteLine((player.Type == PlayerType.HUMAN ? "Player " + player.Name : "The Dealer ")
+                        + " has busted.");
+                }
+            }
         }
 
         private bool DoesUserWantToContinue()
