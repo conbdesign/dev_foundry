@@ -13,7 +13,6 @@ namespace Blackjack
 			get { return cards; }
 			set	{ cards = value; }
 		}
-	
 		public void Shuffle()
 		{
 		}
