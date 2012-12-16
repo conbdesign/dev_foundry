@@ -28,15 +28,30 @@ namespace Blackjack
 
         public Action Play()
         {
-            Console.WriteLine("Would you like to Hit or Stand?(press 'h' to hit..any other key to stand");
-            string temp = Console.ReadLine();
-            if (temp.Equals("h"))
+            if (this.type == PlayerType.HUMAN)
             {
-                return Action.HIT;
+                Console.WriteLine("Would you like to Hit or Stand?(press 'h' to hit..any other key to stand");
+                string temp = Console.ReadLine();
+                if (temp.Equals("h"))
+                {
+                    return Action.HIT;
+                }
+                else
+                {
+                    return Action.STAND;
+                }
             }
-            else 
+            else
             {
-                return Action.STAND;
+                if (hand.Score() <= 15)
+                {
+                    return Action.HIT;
+                }
+                else
+                {
+                    return Action.STAND;
+                }
+             
             }
  
         }

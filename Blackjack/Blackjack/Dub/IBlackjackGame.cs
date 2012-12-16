@@ -7,6 +7,8 @@ namespace Blackjack
 {
     public interface IBlackjackGame
     {
+        List<IPlayer> Players { get; }
+
         void Setup();
 
         void Play();
