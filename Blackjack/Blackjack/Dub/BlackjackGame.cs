@@ -85,6 +85,7 @@ namespace Blackjack
         private void PlayHand()
         {
             deck.Reset();
+            deck.Shuffle();
 
             foreach (IPlayer player in players)
             {
