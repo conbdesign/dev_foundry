@@ -8,7 +8,7 @@ namespace Blackjack
     public class BlackjackGame : IBlackjackGame
     {
         private int numberOfPlayer = -1;
-        private List<IPlayer> players;
+        private List<IPlayer> players = new List<IPlayer>();
         private IDeck deck;
 
         public List<IPlayer> Players
@@ -23,6 +23,8 @@ namespace Blackjack
             GetPlayerCount(ref numberOfPlayer, ref inputText);
 
             CreateDealer();
+
+            Pause();
 
             CreatePlayers();
 
@@ -39,6 +41,7 @@ namespace Blackjack
             for (int i = 0; i < numberOfPlayer; i++)
             {
                 InputPlayer();
+                Pause();
             }
         }
 
@@ -125,6 +128,12 @@ namespace Blackjack
                 return false;
 
             return true;
+        }
+
+        private void Pause()
+        {
+            Console.WriteLine(Environment.NewLine + "Press any key to continue ...");
+            Console.ReadLine();
         }
     }
 }
