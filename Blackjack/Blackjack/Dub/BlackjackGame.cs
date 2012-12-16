@@ -11,6 +11,12 @@ namespace Blackjack
         private List<IPlayer> players = new List<IPlayer>();
         private IDeck deck;
 
+
+        public List<IPlayer> Players
+        {
+            get { return players; }
+        }
+
         public void Setup()
         {
             string inputText = "a";
@@ -23,7 +29,7 @@ namespace Blackjack
 
             CreatePlayers();
 
-            
+            deck = new Deck();
         }
 
         private void CreateDealer()
@@ -33,8 +39,6 @@ namespace Blackjack
 
         private void CreatePlayers()
         {
-<<<<<<< HEAD
-=======
             for (int i = 0; i < numberOfPlayer; i++)
             {
                 InputPlayer();
@@ -47,8 +51,6 @@ namespace Blackjack
             Console.Clear();
             Console.Write("Enter a player name: ");
             string name = Console.ReadLine();
->>>>>>> d1e6cf40f2a0f27d22d910c03b3a4523861c99a3
-
         }
 
         private static void GetPlayerCount(ref int numberOfPlayer, ref string inputText)
@@ -71,8 +73,6 @@ namespace Blackjack
 
         public void Play()
         {
-<<<<<<< HEAD
-=======
             bool wantToPlayMore = true;
 
             while (wantToPlayMore)
@@ -148,8 +148,8 @@ namespace Blackjack
 
             if (continueText.ToUpper() != "Y")
                 return false;
->>>>>>> d1e6cf40f2a0f27d22d910c03b3a4523861c99a3
 
+            return true;
         }
 
         private void Pause()
