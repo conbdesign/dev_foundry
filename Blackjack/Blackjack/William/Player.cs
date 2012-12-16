@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Blackjack
 {
-    class Player
+    class Player : IPlayer
     {
         private IHand hand;
         private string name;
@@ -22,7 +22,8 @@ namespace Blackjack
 
         public  IHand Hand
         { 
-            get {return hand;}
+            get { return hand; }
+            set { hand = value; }
         }
 
         public Action Play()

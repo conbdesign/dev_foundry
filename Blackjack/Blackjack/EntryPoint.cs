@@ -10,6 +10,10 @@ namespace Blackjack
         static void Main(string[] args)
         {
             IBlackjackGame game = new BlackjackGame();
+
+            game.Setup();
+
+            game.Play();
         }
     }
 }
