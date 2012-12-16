@@ -7,15 +7,18 @@ namespace Blackjack
 {
     public class Output : IOutputInput
     {
-        public void DisplayGame(IBlackjackGame game)
+        public static void DisplayGame(IBlackjackGame game)
         {
+            Console.Clear();
             foreach (IPlayer player in game.Players)
             {
                 DisplayPlayer(player);
+
+                
             }
         }
 
-        private void DisplayPlayer(IPlayer player)
+        private static void DisplayPlayer(IPlayer player)
         {
 
         }
