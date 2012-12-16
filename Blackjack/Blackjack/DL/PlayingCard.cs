@@ -8,23 +8,26 @@ namespace Blackjack
     public class PlayingCard : IPlayingCard
     {
 		private Suit suit;
-		private int rank;
+		private Rank rank;
 		private bool hidden;
 		
 		public Suit Suit 
 		{ 
 			get { return suit; }
 		}
-        public int Rank 
+
+        public Rank Rank 
 		{
 			get { return rank; }
 		}
+
         public bool Hidden 
 		{ 
 			get { return Hidden; }
 			set { Hidden = false; }
 		}
-        public PlayingCard(Suit new_suit, int new_rank, bool isHidden)
+
+        public PlayingCard(Suit new_suit, Rank new_rank, bool isHidden)
         {
 			hidden = isHidden;
 			rank = new_rank;

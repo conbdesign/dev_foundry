@@ -33,7 +33,7 @@ namespace Blackjack
     public interface IPlayingCard
     {
         Suit Suit { get; }
-        int Rank { get; }
+        Rank Rank { get; }
         bool Hidden { get; set; }
     }
 }

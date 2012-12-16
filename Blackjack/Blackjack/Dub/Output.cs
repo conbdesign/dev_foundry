@@ -9,6 +9,8 @@ namespace Blackjack
     {
         public static void DisplayGame(IBlackjackGame game)
         {
+            Console.Clear();
+
             foreach (IPlayer player in game.Players)
             {
                 DisplayPlayer(player);

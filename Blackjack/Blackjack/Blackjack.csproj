@@ -48,6 +48,7 @@
     <Compile Include="DL\IDeck.cs" />
     <Compile Include="DL\IHand.cs" />
     <Compile Include="Dub\Output.cs" />
+    <Compile Include="DL\Hand.cs" />
     <Compile Include="William\Player.cs" />
     <Compile Include="William\IPlayer.cs" />
     <Compile Include="DL\IPlayingCard.cs" />

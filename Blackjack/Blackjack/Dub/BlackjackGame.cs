@@ -11,7 +11,6 @@ namespace Blackjack
         private List<IPlayer> players = new List<IPlayer>();
         private IDeck deck;
 
-
         public List<IPlayer> Players
         {
             get { return players; }
@@ -49,6 +48,8 @@ namespace Blackjack
             Console.Clear();
             Console.Write("Enter a player name: ");
             string name = Console.ReadLine();
+
+            players.Add(new Player(PlayerType.HUMAN, name));
         }
 
         private static void GetPlayerCount(ref int numberOfPlayer, ref string inputText)
@@ -83,7 +84,12 @@ namespace Blackjack
 
         private void PlayHand()
         {
-            deck.Shuffle();
+            deck.Reset();
+
+            foreach (IPlayer player in players)
+            {
+                player.Reset();
+            }
 
             DealHands();
 
@@ -98,12 +104,15 @@ namespace Blackjack
             {
                 player.Hand.AddCard(deck.Draw());
                 Output.DisplayGame(this);
+                Pause();
+
             }
 
             foreach (IPlayer player in players)
             {
                 player.Hand.AddCard(deck.Draw());
                 Output.DisplayGame(this);
+                Pause();
             }
         }
 
@@ -115,6 +124,7 @@ namespace Blackjack
                 {
                     player.Hand.AddCard(deck.Draw());
                     Output.DisplayGame(this);
+                    Pause();
                 }
             }
         }
@@ -136,6 +146,8 @@ namespace Blackjack
                         + " has busted.");
                 }
             }
+
+            Pause();
         }
 
         private bool DoesUserWantToContinue()
@@ -154,7 +166,7 @@ namespace Blackjack
         {
             Console.WriteLine();
             Console.WriteLine("Press any key to continue ... ");
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }

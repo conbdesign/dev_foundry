@@ -26,5 +26,7 @@ namespace Blackjack
         IHand Hand { get; set; }
 
         Action Play();
+
+        void Reset();
     }
 }

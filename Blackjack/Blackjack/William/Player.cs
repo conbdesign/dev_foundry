@@ -28,13 +28,43 @@ namespace Blackjack
 
         public Action Play()
         {
-            return Action.STAND;
- 
+            if (this.type == PlayerType.HUMAN)
+            {
+                Console.WriteLine("Hit or Stand <H/S>?");
+                ConsoleKeyInfo info = Console.ReadKey();
+
+                if (info.Key == ConsoleKey.H)
+                {
+                    return Action.HIT;
+                }
+                else
+                {
+                    return Action.STAND;
+                }
+            }
+            else
+            {
+                if (this.hand.Score() < 16)
+                {
+                    return Action.HIT;
+                }
+                else
+                {
+                    return Action.STAND;
+                }
+            }
         }
+
         public Player(PlayerType stype, string sname)
         {
+            hand = new Hand();
             name = sname;
             type = stype;
+        }
+
+        public void Reset()
+        {
+            hand.Cards.Clear();
         }
     }
 }
