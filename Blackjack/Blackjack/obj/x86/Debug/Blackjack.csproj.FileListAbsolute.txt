@@ -1,0 +1,5 @@
+C:\Users\Keith\Documents\Development\dev_foundry\Blackjack\Blackjack\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Keith\Documents\Development\dev_foundry\Blackjack\Blackjack\bin\Debug\Blackjack.exe
+C:\Users\Keith\Documents\Development\dev_foundry\Blackjack\Blackjack\bin\Debug\Blackjack.pdb
+C:\Users\Keith\Documents\Development\dev_foundry\Blackjack\Blackjack\obj\x86\Debug\Blackjack.exe
+C:\Users\Keith\Documents\Development\dev_foundry\Blackjack\Blackjack\obj\x86\Debug\Blackjack.pdb

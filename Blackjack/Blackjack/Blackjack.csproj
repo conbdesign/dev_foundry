@@ -43,7 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Dub\BlackjackGame.cs" />
+    <Compile Include="EntryPoint.cs" />
+    <Compile Include="Dub\IBlackjackGame.cs" />
+    <Compile Include="DL\IDeck.cs" />
+    <Compile Include="DL\IHand.cs" />
+    <Compile Include="Dub\IOutputInput.cs" />
+    <Compile Include="William\IPlayer.cs" />
+    <Compile Include="DL\IPlayingCard.cs" />
+    <Compile Include="DL\PlayingCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
