@@ -8,7 +8,7 @@ namespace Blackjack
     public class BlackjackGame : IBlackjackGame
     {
         private int numberOfPlayer = -1;
-        private List<IPlayer> players;
+        private List<IPlayer> players = new List<IPlayer>();
         private IDeck deck;
 
 
