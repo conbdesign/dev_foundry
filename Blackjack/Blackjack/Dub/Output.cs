@@ -12,12 +12,13 @@ namespace Blackjack
             foreach (IPlayer player in game.Players)
             {
                 DisplayPlayer(player);
+
             }
         }
 
         private static void DisplayPlayer(IPlayer player)
         {
-
+            Console.WriteLine("Player Name: "+player);
         }
     }
 }
