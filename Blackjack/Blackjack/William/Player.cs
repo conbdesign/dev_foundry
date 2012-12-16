@@ -28,7 +28,16 @@ namespace Blackjack
 
         public Action Play()
         {
-            return Action.STAND;
+            Console.WriteLine("Would you like to Hit or Stand?(press 'h' to hit..any other key to stand");
+            string temp = Console.ReadLine();
+            if (temp.Equals("h"))
+            {
+                return Action.HIT;
+            }
+            else 
+            {
+                return Action.STAND;
+            }
  
         }
         public Player(PlayerType stype, string sname)
