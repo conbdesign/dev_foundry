@@ -47,7 +47,6 @@
     <Compile Include="Dub\IBlackjackGame.cs" />
     <Compile Include="DL\IDeck.cs" />
     <Compile Include="DL\IHand.cs" />
-    <Compile Include="Dub\IOutput.cs" />
     <Compile Include="Dub\Output.cs" />
     <Compile Include="William\Player.cs" />
     <Compile Include="William\IPlayer.cs" />

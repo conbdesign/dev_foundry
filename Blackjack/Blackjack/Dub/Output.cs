@@ -18,7 +18,23 @@ namespace Blackjack
 
         private static void DisplayPlayer(IPlayer player)
         {
-            Console.WriteLine("Player Name: "+player);
+            Console.WriteLine(player.Name);
+
+            foreach (IPlayingCard card in player.Hand.Cards)
+            {
+                DisplayCard(card);
+            }
+
+            Console.WriteLine();
+
+            Console.WriteLine("Score: " + player.Hand.Score());
+
+            Console.WriteLine(Environment.NewLine);
+        }
+
+        private static void DisplayCard(IPlayingCard card)
+        {
+            Console.Write(card.Rank.ToString() + " of " + card.Suit.ToString() + ", ");
         }
     }
 }

@@ -11,6 +11,12 @@ namespace Blackjack
         private List<IPlayer> players;
         private IDeck deck;
 
+
+        public List<IPlayer> Players
+        {
+            get { return players; }
+        }
+
         public void Setup()
         {
             string inputText = "a";
@@ -21,7 +27,7 @@ namespace Blackjack
 
             CreatePlayers();
 
-            
+            deck = new Deck();
         }
 
         private void CreateDealer()
@@ -31,7 +37,22 @@ namespace Blackjack
 
         private void CreatePlayers()
         {
+<<<<<<< HEAD
 
+=======
+            for (int i = 0; i < numberOfPlayer; i++)
+            {
+                InputPlayer();
+                Pause();
+            }
+        }
+
+        private void InputPlayer()
+        {
+            Console.Clear();
+            Console.Write("Enter a player name: ");
+            string name = Console.ReadLine();
+>>>>>>> 69088281f6499151cd8fd61e48bb23c78c5992d6
         }
 
         private static void GetPlayerCount(ref int numberOfPlayer, ref string inputText)
@@ -54,7 +75,86 @@ namespace Blackjack
 
         public void Play()
         {
+<<<<<<< HEAD
+=======
+            bool wantToPlayMore = true;
 
+            while (wantToPlayMore)
+            {
+                PlayHand();
+
+                wantToPlayMore = DoesUserWantToContinue();
+            }
+        }
+
+        private void PlayHand()
+        {
+            deck.Shuffle();
+
+            DealHands();
+
+            GivePlayersChanceToHit();
+
+            DeclareWinners();
+        }
+
+        private void DealHands()
+        {
+            foreach (IPlayer player in players)
+            {
+                player.Hand.AddCard(deck.Draw());
+                Output.DisplayGame(this);
+            }
+
+            foreach (IPlayer player in players)
+            {
+                player.Hand.AddCard(deck.Draw());
+                Output.DisplayGame(this);
+            }
+        }
+
+        private void GivePlayersChanceToHit()
+        {
+            foreach (IPlayer player in players)
+            {
+                while (player.Play() == Action.HIT)
+                {
+                    player.Hand.AddCard(deck.Draw());
+                    Output.DisplayGame(this);
+                }
+            }
+        }
+
+        private void DeclareWinners()
+        {
+            Console.Clear();
+
+            foreach (IPlayer player in players)
+            {
+                if (player.Hand.Score() <= 21)
+                {
+                    Console.WriteLine((player.Type == PlayerType.HUMAN ? "Player " + player.Name : "The Dealer ") 
+                        + " has won.");
+                }
+                else
+                {
+                    Console.WriteLine((player.Type == PlayerType.HUMAN ? "Player " + player.Name : "The Dealer ")
+                        + " has busted.");
+                }
+            }
+        }
+
+        private bool DoesUserWantToContinue()
+        {
+            Console.Clear();
+            Console.Write("Do you want to play another hand <Y/N>? ");
+            string continueText = Console.ReadLine();
+
+            if (continueText.ToUpper() != "Y")
+                return false;
+>>>>>>> 69088281f6499151cd8fd61e48bb23c78c5992d6
+
+            return true;
         }
     }
 }
