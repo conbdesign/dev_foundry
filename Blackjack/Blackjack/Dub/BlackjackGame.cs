@@ -37,9 +37,6 @@ namespace Blackjack
 
         private void CreatePlayers()
         {
-<<<<<<< HEAD
-
-=======
             for (int i = 0; i < numberOfPlayer; i++)
             {
                 InputPlayer();
@@ -52,7 +49,6 @@ namespace Blackjack
             Console.Clear();
             Console.Write("Enter a player name: ");
             string name = Console.ReadLine();
->>>>>>> 69088281f6499151cd8fd61e48bb23c78c5992d6
         }
 
         private static void GetPlayerCount(ref int numberOfPlayer, ref string inputText)
@@ -75,8 +71,6 @@ namespace Blackjack
 
         public void Play()
         {
-<<<<<<< HEAD
-=======
             bool wantToPlayMore = true;
 
             while (wantToPlayMore)
@@ -152,9 +146,15 @@ namespace Blackjack
 
             if (continueText.ToUpper() != "Y")
                 return false;
->>>>>>> 69088281f6499151cd8fd61e48bb23c78c5992d6
 
             return true;
+        }
+
+        private void Pause()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Press any key to continue ... ");
+            Console.ReadLine();
         }
     }
 }
