@@ -33,8 +33,8 @@ namespace Blackjack
         }
         public Player(PlayerType stype, string sname)
         {
-            stype = Type;
-            sname = Name;
+            type = stype;
+            name = sname;
         }
     }
 }
