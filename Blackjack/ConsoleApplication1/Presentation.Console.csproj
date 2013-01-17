@@ -5,11 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{92BA405F-2077-474D-91C4-18FC7E472BEA}</ProjectGuid>
+    <ProjectGuid>{0DFD173A-A6D4-441E-AA5D-79CF8554AFEA}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Blackjack</RootNamespace>
-    <AssemblyName>Blackjack</AssemblyName>
+    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <AssemblyName>ConsoleApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -41,24 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GloriousFuntimes\Deck.cs" />
-    <Compile Include="GloriousFuntimes\Hand.cs" />
-    <Compile Include="GloriousFuntimes\IDeck.cs" />
-    <Compile Include="GloriousFuntimes\IHand.cs" />
-    <Compile Include="GloriousFuntimes\IPlayingCard.cs" />
-    <Compile Include="GloriousFuntimes\Output.cs" />
-    <Compile Include="GloriousFuntimes\PlayingCard.cs" />
-    <Compile Include="GloriousFuntimes\BlackjackGame.cs" />
-    <Compile Include="GloriousFuntimes\EntryPoint.cs" />
-    <Compile Include="GloriousFuntimes\IBlackjackGame.cs" />
-    <Compile Include="GloriousFuntimes\Player.cs" />
-    <Compile Include="GloriousFuntimes\IPlayer.cs" />
+    <Compile Include="EntryPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\ProjectEuler1\ClassLibrary1\StandardValidation.csproj">
-      <Project>{F44FDB4D-F2B6-49E2-B922-6AEA71FEE76D}</Project>
-      <Name>StandardValidation</Name>
+    <ProjectReference Include="..\Blackjack\Blackjack.csproj">
+      <Project>{92BA405F-2077-474D-91C4-18FC7E472BEA}</Project>
+      <Name>Blackjack</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

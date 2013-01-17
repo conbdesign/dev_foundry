@@ -2,18 +2,18 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{92BA405F-2077-474D-91C4-18FC7E472BEA}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{6203E379-B55F-426C-8125-A1FD67E8E0FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Blackjack</RootNamespace>
-    <AssemblyName>Blackjack</AssemblyName>
+    <RootNamespace>ClassLibrary1</RootNamespace>
+    <AssemblyName>ClassLibrary1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,8 +22,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,25 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GloriousFuntimes\Deck.cs" />
-    <Compile Include="GloriousFuntimes\Hand.cs" />
-    <Compile Include="GloriousFuntimes\IDeck.cs" />
-    <Compile Include="GloriousFuntimes\IHand.cs" />
-    <Compile Include="GloriousFuntimes\IPlayingCard.cs" />
-    <Compile Include="GloriousFuntimes\Output.cs" />
-    <Compile Include="GloriousFuntimes\PlayingCard.cs" />
-    <Compile Include="GloriousFuntimes\BlackjackGame.cs" />
-    <Compile Include="GloriousFuntimes\EntryPoint.cs" />
-    <Compile Include="GloriousFuntimes\IBlackjackGame.cs" />
-    <Compile Include="GloriousFuntimes\Player.cs" />
-    <Compile Include="GloriousFuntimes\IPlayer.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\ProjectEuler1\ClassLibrary1\StandardValidation.csproj">
-      <Project>{F44FDB4D-F2B6-49E2-B922-6AEA71FEE76D}</Project>
-      <Name>StandardValidation</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
